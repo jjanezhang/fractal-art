@@ -5,9 +5,8 @@ import requests
 load_dotenv()
 WEATHER_API = os.getenv('WEATHER_API')
 
-def get_weather_params(lat, lon):
-    latlon = f"{lat},{lon}"
-    URL = f"https://api.weatherapi.com/v1/current.json?key={WEATHER_API}&q={latlon}&aqi=no"
+def get_weather_params(q):
+    URL = f"https://api.weatherapi.com/v1/current.json?key={WEATHER_API}&q={q}&aqi=no"
     r = requests.get(url = URL)
     data = r.json()
     location = data['location']['name']

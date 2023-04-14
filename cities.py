@@ -1,0 +1,83 @@
+from geopy.geocoders import Nominatim
+import collections
+def get_city_lat_lon():
+    cities = [
+    'Nuuk, Greenland',
+    'Riyadh, Saudi Arabia',
+    'Reykjavik, Iceland',
+    'Mumbai, India',
+    'Bergen, Norway',
+    'Ulaanbaatar, Mongolia',
+    'Rio de Janeiro, Brazil',
+    'Moscow, Russia',
+    'Cairo, Egypt',
+    'Tromsø, Norway',
+    'Mexico City, Mexico',
+    'Singapore, Singapore',
+    'Toronto, Canada',
+    'Kiruna, Sweden',
+    'Sydney, Australia',
+    'Vancouver, Canada',
+    'Ushuaia, Argentina',
+    'Marrakech, Morocco',
+    'Perth, Australia',
+    'Svalbard, Norway',
+    'Havana, Cuba',
+    'Zagreb, Croatia',
+   'Niamey, Niger',
+    'Panama City, Panama',
+    'Buenos Aires, Argentina',
+    'Bangkok, Thailand',
+    'Stockholm, Sweden',
+    'Lima, Peru',
+    'Harbin, China',
+    'Anadyr, Russia',
+    'Darwin, Australia',
+    'Kigali, Rwanda',
+    'Dubai, United Arab Emirates',
+    'Tórshavn, Faroe Islands',
+    'New Orleans, United States',
+    'Amsterdam, Netherlands',
+    'Takurza, Nigeria',
+    'Ndjamena, Chad',
+    'Kuala Lumpur, Malaysia',
+    'Seoul, South Korea',
+    'Norilsk, Russia',
+    'Shakhtërskiy, Russia',
+    'Fairbanks, Alaska',
+    'Cape Town, South Africa',
+    'Hanoi, Vietnam',
+    'Nome, Alaska',
+    'Casablanca, Morocco',
+    'Honolulu, United States',
+    'Anchorage, Alaska',
+    'Amansha, Turkmenistan',
+    'Quito, Ecuador',
+    'Vientiane, Laos',
+    'Helsinki, Finland',
+    'Marrakesh, Morocco',
+    'Oslo, Norway',
+    'Yamoussoukro, Cote dIvoire',
+    'Santo Domingo, Dominican Republic',
+    'Inukjuak, Canada',
+    'Jakarta, Indonesia',
+    'Brussels, Belgium',
+    'Vienna, Austria',
+    'San Juan, Puerto Rico',
+    'Timbuktu, Mali',
+    'Kyoto, Japan',
+    'Khartoum, Sudan',
+    'Jerusalem, Israel',
+    'Bissau, Guinea-Bissau',
+    'Zurich, Switzerland',
+    'Manila, Philippines']
+    geolocator = Nominatim(user_agent='my_app')
+    result = []
+    for city in cities:
+        location = geolocator.geocode(city)
+        if location:
+            lat = location.latitude
+            lon = location.longitude
+            result.append((city.split(',')[0], lat, lon))
+
+    return result
