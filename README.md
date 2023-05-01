@@ -1,4 +1,4 @@
-# Jane Zhang Final Project: City Weather Fractal Art
+# City Weather Fractal Art
 
 ## How to run
 1. Save the fractal-art folder
