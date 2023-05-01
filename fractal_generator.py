@@ -54,7 +54,7 @@ def add_label(image, text):
 
 def get_max_iterations(humidity, precipitation):
     #range 10-500
-    min_value, max_value = 10, 160
+    min_value, max_value = 5, 70
     if precipitation:
         min_value = 100
     
@@ -135,4 +135,4 @@ def get_fractal_set():
 
 n = sys.argv[1]
 print(get_fractal(n))
-#print(get_fractal_set())
+# print(get_fractal_set())

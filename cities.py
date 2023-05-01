@@ -1,5 +1,5 @@
 from geopy.geocoders import Nominatim
-import collections
+
 def get_city_lat_lon():
     cities = [
     'Nuuk, Greenland',
