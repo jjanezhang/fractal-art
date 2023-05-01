@@ -15,4 +15,4 @@ cd insert-path-to-fractal-art directory
 python fractal_generator.py shanghai
 ```
 
-See *Examples* folder for example generated sets!
+See *fractals* folder for example generated sets!
